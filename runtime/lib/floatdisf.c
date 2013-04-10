@@ -12,7 +12,6 @@
  *===----------------------------------------------------------------------===
  */
 
-#if !defined(__GNUC__) || __GNUC__ < 4 || (__GNUC__ == 4 && __GNUC_MINOR__ < 8) // gcc >= 4.8 implements this in libgcc
 #include "int_lib.h"
 #include <float.h>
 
@@ -78,4 +77,3 @@ __floatdisf(di_int a)
            ((su_int)a & 0x007FFFFF);   /* mantissa */
     return fb.f;
 }
-#endif

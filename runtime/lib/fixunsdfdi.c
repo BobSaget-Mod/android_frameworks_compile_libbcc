@@ -12,7 +12,6 @@
  * ===----------------------------------------------------------------------===
  */
 
-#if !defined(__GNUC__) || __GNUC__ < 4 || (__GNUC__ == 4 && __GNUC_MINOR__ < 8) // gcc >= 4.8 implements this in libgcc
 #include "int_lib.h"
 
 /* Returns: convert a to a unsigned long long, rounding toward zero.
@@ -44,4 +43,3 @@ __fixunsdfdi(double a)
         r.all >>= (52 - e);
     return r.all;
 }
-#endif
